@@ -29,7 +29,7 @@
             <select class="custom-select d-block w-100" id="owner" name="owner_id" required>
                 <option value="">Choose...</option>
                 <c:forEach var="user" items="${users}" varStatus="status">
-                    <option value="${user.id}">${car.ownerName eq user.username ? 'selected' : ''}</option>
+                    <option value="${user.id}" ${car.ownerName eq user.username ? 'selected' : ''}>${user.username}</option>
                 </c:forEach>
             </select>
             <div class="invalid-feedback">
